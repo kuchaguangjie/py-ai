@@ -1,0 +1,111 @@
+# ===========================================================================
+# py-ai — .gitignore
+# Organized by category. Entries noted "shared" can be un-ignored (see the
+# `!` rules under VS Code) if you want to commit team-wide configuration.
+# ===========================================================================
+
+### Python ##################################################################
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+wheels/
+sdist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+site/
+__pypackages__/
+.installed.cfg
+
+### Virtual environments ####################################################
+.venv/
+venv/
+env/
+ENV/
+
+### Tests / coverage / linters / type-checkers ##############################
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.pytype/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.cover
+
+### uv / pip ################################################################
+# uv keeps its cache in ~/.cache/uv by default; these cover local overrides.
+.uv/
+.uv-cache/
+.pip/
+
+### Jupyter #################################################################
+.ipynb_checkpoints/
+
+### Editors & IDEs ##########################################################
+# --- VS Code --- (dir is ignored, but shared config is kept)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# --- JetBrains (PyCharm, IntelliJ IDEA, ...) ---
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# --- JetBrains Fleet ---
+.fleet/
+
+# --- Vim / Neovim ---
+*.swp
+*.swo
+*.swn
+.*.sw?
+[._]*.un~
+
+# --- Emacs ---
+*~
+\#*\#
+.\#*
+
+# --- Sublime Text ---
+*.sublime-workspace
+*.sublime-project
+
+# --- Spyder ---
+.spyproject/
+
+# --- Eclipse / PyDev ---
+.project
+.pydevproject
+.settings/
+
+# --- NetBeans ---
+nbproject/private/
+
+# --- Zed ---
+.zed/
+
+### Operating systems / desktops ############################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
