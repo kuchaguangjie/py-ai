@@ -28,7 +28,7 @@ from __future__ import annotations
 
 import argparse
 from collections.abc import Callable
-
+from py_basic.async_demo import demo as async_demo
 from py_basic.type_hints_demo import demo as type_hints_demo
 
 # ---------------------------------------------------------------------------
@@ -41,8 +41,8 @@ from py_basic.type_hints_demo import demo as type_hints_demo
 # ---------------------------------------------------------------------------
 DEMOS: dict[str, tuple[str, Callable[[], None]]] = {
     "type-hints": ("Modern type system, Python 3.12+ / PEP 695", type_hints_demo),
+    "async": ("Asyncio concurrency & streaming (async/await, gather, AsyncGenerator)", async_demo),
 }
-
 
 def list_demos() -> None:
     """Print every registered demo name with its summary. / 列出全部演示。"""
