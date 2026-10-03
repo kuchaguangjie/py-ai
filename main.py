@@ -29,6 +29,7 @@ from __future__ import annotations
 import argparse
 from collections.abc import Callable
 from py_basic.async_demo import demo as async_demo
+from py_basic.metaprogramming_demo import demo as metaprogramming_demo
 from py_basic.type_hints_demo import demo as type_hints_demo
 
 # ---------------------------------------------------------------------------
@@ -42,6 +43,10 @@ from py_basic.type_hints_demo import demo as type_hints_demo
 DEMOS: dict[str, tuple[str, Callable[[], None]]] = {
     "type-hints": ("Modern type system, Python 3.12+ / PEP 695", type_hints_demo),
     "async": ("Asyncio concurrency & streaming (async/await, gather, AsyncGenerator)", async_demo),
+    "metaprogramming": (
+        "Decorators & metaprogramming (inspect, wraps, class decorators)",
+        metaprogramming_demo,
+    ),
 }
 
 def list_demos() -> None:
